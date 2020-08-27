@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/kloop-map/static/css/main.66ae596b.chunk.css",
-    "main.js": "/kloop-map/static/js/main.fad47b60.chunk.js",
-    "main.js.map": "/kloop-map/static/js/main.fad47b60.chunk.js.map",
+    "main.js": "/kloop-map/static/js/main.0d019f5b.chunk.js",
+    "main.js.map": "/kloop-map/static/js/main.0d019f5b.chunk.js.map",
     "runtime-main.js": "/kloop-map/static/js/runtime-main.7843823f.js",
     "runtime-main.js.map": "/kloop-map/static/js/runtime-main.7843823f.js.map",
     "static/js/2.a8a88c9b.chunk.js": "/kloop-map/static/js/2.a8a88c9b.chunk.js",
     "static/js/2.a8a88c9b.chunk.js.map": "/kloop-map/static/js/2.a8a88c9b.chunk.js.map",
     "index.html": "/kloop-map/index.html",
-    "precache-manifest.3336976878155989776b5de0c20fc13b.js": "/kloop-map/precache-manifest.3336976878155989776b5de0c20fc13b.js",
+    "precache-manifest.f7d2850742ee71c06a41aae2165fa05b.js": "/kloop-map/precache-manifest.f7d2850742ee71c06a41aae2165fa05b.js",
     "service-worker.js": "/kloop-map/service-worker.js",
     "static/css/main.66ae596b.chunk.css.map": "/kloop-map/static/css/main.66ae596b.chunk.css.map",
     "static/js/2.a8a88c9b.chunk.js.LICENSE.txt": "/kloop-map/static/js/2.a8a88c9b.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.7843823f.js",
     "static/js/2.a8a88c9b.chunk.js",
     "static/css/main.66ae596b.chunk.css",
-    "static/js/main.fad47b60.chunk.js"
+    "static/js/main.0d019f5b.chunk.js"
   ]
 }
