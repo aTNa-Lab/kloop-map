@@ -1,5 +1,5 @@
 {
-  "homepage": "http://aTNa-Lab.github.io/Kloop-map",
+  "homepage": "http://aTNa-Lab.github.io/kloop-map",
   "name": "kloop-map",
   "version": "0.1.0",
   "private": true,
@@ -12,7 +12,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "react-simple-maps": "^2.1.2"
+    "react-simple-maps": "^2.1.2",
+    "react-tooltip": "^4.2.8"
   },
   "scripts": {
     "start": "react-scripts start",
