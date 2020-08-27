@@ -12,6 +12,15 @@ const geoBishkek = "https://raw.githubusercontent.com/aTNa-Lab/RepForTests/maste
 const geoOsh = "https://raw.githubusercontent.com/aTNa-Lab/RepForTests/master/Osh.json"
 // const csvUrl = "https://raw.githubusercontent.com/aTNa-Lab/RepForTests/master/kg_map_data.csv"
 
+const offsets = {
+  "Аламудунский": 25,
+  "Московский": 3,
+  "Ысык- Атинкий": 3,
+  "Сокулукский": -20,
+  "Чуйский": 10,
+  "Панфиловский": -35
+}
+
 const Map = (props) => {
 
 	const [[width, height], setSize] = useState([0, 0]);
@@ -40,8 +49,6 @@ const Map = (props) => {
     })
     return current
 	}
-	
-	const markers = []
   
     // const proj = projections["geoEqualEarth"]().rotate([-25, 0, 0]).scale(9000).translate([-5100, 7500])
     return (
@@ -79,8 +86,15 @@ const Map = (props) => {
               const centroid = geoCentroid(geo);
               return (
                 <g key={geo.rsmKey + "-name"}>
-                  <Marker coordinates={centroid}>
-                    <text fontSize={props.font} textAnchor="middle">
+                  <Marker coordinates={centroid} 
+                  onMouseEnter={() => {
+                    props.setTooltipContent(returnCurrent(geo.properties.name));
+                  }}
+                  onMouseLeave={() => {
+                    props.setTooltipContent("");
+                  }}
+                  >
+                    <text y={offsets[geo.properties.name]} fontSize={props.font} textAnchor="middle">
                       {returnCurrent(geo.properties.name).trueName}
                     </text>
                   </Marker>
@@ -117,7 +131,14 @@ const Map = (props) => {
               const centroid = geoCentroid(geo);
               return (
                 <g key={geo.rsmKey + "-name"}>
-                  <Marker coordinates={centroid}>
+                  <Marker coordinates={centroid}
+                  onMouseEnter={() => {
+                    props.setTooltipContent(returnCurrent("Бишкек"));
+                  }}
+                  onMouseLeave={() => {
+                    props.setTooltipContent("");
+                  }}
+                  >
                     <text fontSize={props.font} textAnchor="middle">
 										{returnCurrent("Бишкек").trueName}
                     </text>
@@ -155,7 +176,14 @@ const Map = (props) => {
               const centroid = geoCentroid(geo);
               return (
                 <g key={geo.rsmKey + "-name"}>
-                  <Marker coordinates={centroid}>
+                  <Marker coordinates={centroid}
+                  onMouseEnter={() => {
+                    props.setTooltipContent(returnCurrent("Ош"));
+                  }}
+                  onMouseLeave={() => {
+                    props.setTooltipContent("");
+                  }}
+                  >
                     <text fontSize={props.font} textAnchor="middle">
 										{returnCurrent("Ош").trueName}
                     </text>
