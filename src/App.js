@@ -25,6 +25,7 @@ class App extends Component {
       csv(urlString.url)
       .then(d => {
         this.setState({data: d, ready: true})
+        console.log("DATA", d)
         console.log("Min/Max", extent(d.map(item => item.sum)))
       })
     }

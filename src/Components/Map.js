@@ -24,7 +24,7 @@ const Map = (props) => {
 		return () => window.removeEventListener('resize', updateSize);
 	}, []);
 
-  const colorScale = scaleSequential().domain([100,1000]).interpolator(interpolate("white", "orange"));
+  const colorScale = scaleSequential().domain([0,10]).interpolator(interpolate("white", "orange"));
 
   const returnColor = (name) => {
     let color = colorScale(returnCurrent(name).sum)
@@ -39,7 +39,9 @@ const Map = (props) => {
       }
     })
     return current
-  }
+	}
+	
+	const markers = []
   
     // const proj = projections["geoEqualEarth"]().rotate([-25, 0, 0]).scale(9000).translate([-5100, 7500])
     return (
@@ -79,7 +81,7 @@ const Map = (props) => {
                 <g key={geo.rsmKey + "-name"}>
                   <Marker coordinates={centroid}>
                     <text fontSize={props.font} textAnchor="middle">
-                      {geo.properties.name}
+                      {returnCurrent(geo.properties.name).trueName}
                     </text>
                   </Marker>
                 </g>
@@ -117,7 +119,7 @@ const Map = (props) => {
                 <g key={geo.rsmKey + "-name"}>
                   <Marker coordinates={centroid}>
                     <text fontSize={props.font} textAnchor="middle">
-                      Бишкек
+										{returnCurrent("Бишкек").trueName}
                     </text>
                   </Marker>
                 </g>
@@ -155,7 +157,7 @@ const Map = (props) => {
                 <g key={geo.rsmKey + "-name"}>
                   <Marker coordinates={centroid}>
                     <text fontSize={props.font} textAnchor="middle">
-											Ош
+										{returnCurrent("Ош").trueName}
                     </text>
                   </Marker>
                 </g>
